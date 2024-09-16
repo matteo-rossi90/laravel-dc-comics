@@ -36,8 +36,12 @@ class ComiController extends Controller
      * Display the specified resource.
      */
     public function show(string $id)
+
     {
-        //
+        //filtrare gli elementi estratti attraverso il numero id
+        $fumetto = Comic::find($id);
+
+        return view('comics.show', compact('fumetto'));
     }
 
     /**

@@ -20,8 +20,10 @@
                             <img src="{{ $fumetto->thumb}}" alt="{{ $fumetto->title }}">
                             <h3>{{ $fumetto->title }}</h3>
                             <h4>{{ $fumetto->price }}</h4>
-                            <h4>{{ $fumetto->series }}</h4>
-                            <h4>{{ $fumetto->type }}</h4>
+
+                            <div class="d-flex justify-content-center my-3">
+                                <a href="{{ route('comics.show', $fumetto)}}" class="btn btn-primary">Dettagli</a>
+                            </div>
 
                         </div>
 
