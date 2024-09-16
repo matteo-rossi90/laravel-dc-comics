@@ -3,7 +3,7 @@
 @endphp
 
 <section id="merch">
-    <div class="container">
+    <div class="_container">
         <!-- icone con menu per i prodotti -->
         <nav>
             <ul>

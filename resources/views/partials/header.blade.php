@@ -1,9 +1,9 @@
 <?php
 
-$mainMenu = config('menu.main_menu');
+// $mainMenu = config('menu.main_menu');
 
 ?>
-<header class="container">
+<header class="_container">
     <!-- logo -->
     <div id="box-image">
         <a href="#">

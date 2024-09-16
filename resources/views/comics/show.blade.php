@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="_container">
     <div class="row g-3 py-5">
         <h1>{{ $fumetto->title }}</h1>
         <div class="col">

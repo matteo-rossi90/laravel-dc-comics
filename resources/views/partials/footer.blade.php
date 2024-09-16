@@ -1,6 +1,5 @@
 @php
 
-$mainMenu = config('menu.main_menu');
 $shop = config('menu.shopItems');
 $dc_items = config('menu.dcItems');
 $sites = config('menu.siteItems');
@@ -13,7 +12,7 @@ $follow = config('menu.socialItems');
 
         <div class="background">
 
-            <div class="container">
+            <div class="_container">
 
                 <div id="flex-wrap">
 
@@ -24,13 +23,22 @@ $follow = config('menu.socialItems');
 
                             <h3>DC Comics</h3>
 
-                            <!-- inserimento dinamico del menu DC Comics -->
+                            <!-- inserimento del menu DC Comics -->
                             <ul>
-                                @foreach ($mainMenu as $menu )
-                                    <li>
-                                        <a href="{{ route($menu['name'])}}">{{ $menu['text']}}</a>
-                                    </li>
-                                @endforeach
+
+
+                                <li>
+                                    <a href="{{ route('home') }}">Home</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('comics.index') }}">I fumetti migliori</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('contacts') }}">Contatti</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('comics.create') }}">Nuovi fumetti</a>
+                                </li>
                             </ul>
 
                         </nav>
@@ -41,9 +49,9 @@ $follow = config('menu.socialItems');
                             <ul>
 
                                @foreach ($shop as $item )
-                                    <li>
+                                <li>
                                     <a href="#">{{ $item['text']}}</a>
-                                    </li>
+                                </li>
                                 @endforeach
 
                             </ul>
@@ -78,9 +86,9 @@ $follow = config('menu.socialItems');
                             <ul>
 
                                 @foreach ($sites as $siti )
-                                    <li>
+                                <li>
                                     <a href="#">{{ $siti['text']}}</a>
-                                    </li>
+                                </li>
                                 @endforeach
 
 
@@ -99,7 +107,7 @@ $follow = config('menu.socialItems');
 
     <!-- sezione della parte inferiore del footer -->
     <section id="bottom-bar">
-        <div class="container" id="flex-container">
+        <div class="_container" id="flex-container">
 
             <!-- pulsante per l'iscrizione -->
             <a href="#" id="btn-sign">

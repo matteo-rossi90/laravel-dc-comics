@@ -5,7 +5,7 @@
 
 
     <section>
-        <div class="container">
+        <div class="_container">
 
             <div class="box">
                 <h1 class="text-margin">{{ $title }}</h1>

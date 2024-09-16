@@ -5,7 +5,7 @@
         <section class="section-color">
 
             <!-- contenitore delle cards -->
-            <div id="content" class="container">
+            <div id="content" class="_container">
 
                 <div class="box-blue">
                     <h3>CURRENT SERIES</h3>

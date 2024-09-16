@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="_container">
     <h1>Inserisci un nuovo fumetto</h1>
     <form action="{{ route('comics.store')}}" method="POST" class="my-5">
         {{-- token che genera un identificativo --}}
