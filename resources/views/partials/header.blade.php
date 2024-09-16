@@ -12,13 +12,23 @@ $mainMenu = config('menu.main_menu');
     </div>
 
     <!-- inserimento dinamico in DOM del menu di navigazione -->
-    <nav>
+    {{-- <nav>
         <ul>
         @foreach ($mainMenu as $item)
             <li>
                 <a class="{{ Route::currentRouteName() === $item['name'] ? 'active' : '' }}" href="{{ route($item['name']) }}">{{ $item['text'] }}</a>
             </li>
         @endforeach
+        </ul>
+    </nav> --}}
+
+    <nav>
+        <ul>
+            <li>
+                <a href="{{ route('home') }}">Home</a>
+                <a href="{{ route('comics.index') }}">I fumetti migliori</a>
+                <a href="{{ route('contacts') }}">Contatti</a>
+            </li>
         </ul>
     </nav>
 

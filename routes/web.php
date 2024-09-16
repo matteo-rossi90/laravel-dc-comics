@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,12 +27,12 @@ Route::get('/', function () {
     return view('home', compact('title', 'text'));
 })->name('home');
 
-Route::get('/comics', function () {
+// Route::get('/comics', function () {
 
-    $comics = config('comics');
+    // $comics = config('comics');
 
-    return view('comics', compact('comics'));
-})->name('comics');
+    // return view('comics', compact('comics'));
+// })->name('comics');
 
 Route::get('/contacts', function () {
 
@@ -47,3 +48,5 @@ Route::get('/contacts', function () {
 
     return view('contacts', compact('title', 'text'));
 })->name('contacts');
+
+Route::resource('comics', ComiController::class);

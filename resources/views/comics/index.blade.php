@@ -17,11 +17,11 @@
                         <div class="card-items">
 
                             {{-- parte da modificare e stampare partendo dal db --}}
-                            <img src="{{ $fumetto['thumb']}}" alt="{{ $fumetto['title'] }}">
-                            <h3>{{ $fumetto['title'] }}</h3>
-                            <h4>{{ $fumetto['price'] }}</h4>
-                            <h4>{{ $fumetto['series'] }}</h4>
-                            <h4>{{ $fumetto['type'] }}</h4>
+                            <img src="{{ $fumetto->thumb}}" alt="{{ $fumetto->title }}">
+                            <h3>{{ $fumetto->title }}</h3>
+                            <h4>{{ $fumetto->price }}</h4>
+                            <h4>{{ $fumetto->series }}</h4>
+                            <h4>{{ $fumetto->type }}</h4>
 
                         </div>
 
