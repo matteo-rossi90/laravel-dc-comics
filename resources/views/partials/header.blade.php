@@ -28,6 +28,7 @@ $mainMenu = config('menu.main_menu');
                 <a href="{{ route('home') }}">Home</a>
                 <a href="{{ route('comics.index') }}">I fumetti migliori</a>
                 <a href="{{ route('contacts') }}">Contatti</a>
+                <a href="{{ route('comics.create') }}">Nuovi fumetti</a>
             </li>
         </ul>
     </nav>
