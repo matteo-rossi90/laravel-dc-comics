@@ -12,13 +12,16 @@
 </head>
 <body>
 
-    @include('partials.navbar')
+    @include('partials.header')
 
-    @yield('hero')
+    @include('partials.jumbotron')
 
     @yield('content')
 
+    @include('partials.merch')
+
     @include('partials.footer')
+
 
 </body>
 </html>

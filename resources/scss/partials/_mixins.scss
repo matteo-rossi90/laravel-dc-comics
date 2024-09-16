@@ -1,0 +1,18 @@
+@mixin flexbox ($type: 'both'){
+
+    display: flex;
+
+    @if $type == 'vertical'{
+        justify-content: center;
+    }
+
+    @else if $type =='horizontal' {
+        justify-content: center;
+        align-items: center;
+    }
+
+    @else if $type =='both' {
+        justify-content: space-between;
+        align-items: center;
+    }
+}

@@ -1,0 +1,27 @@
+.card-items {
+    width: calc((100% / 5) - 60px);
+    margin: 5px;
+    cursor: pointer;
+
+    img {
+        max-height: 200px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    img:hover {
+        opacity: 0.6;
+    }
+
+    h3,
+    h4 {
+        color: white;
+        margin: 5px 0;
+        font-size: 15px;
+    }
+
+    h4 {
+        font-weight: lighter;
+    }
+}

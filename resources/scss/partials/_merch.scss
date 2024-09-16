@@ -1,0 +1,30 @@
+#merch {
+    background-color: $merch;
+    // height: 150px;
+    padding: 30px;
+
+    ul {
+        list-style-type: none;
+        @include flexbox();
+        gap: 30px;
+        padding: 10px;
+
+        li {
+            @include flexbox();
+            gap: 10px;
+
+            img {
+                height: 40px;
+                width: 40px;
+                object-fit: contain;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 13px;
+            }
+        }
+    }
+
+}

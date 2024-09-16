@@ -1,0 +1,45 @@
+#jumbotron {
+
+    background-image: url('jumbotron.jpg');
+    background-size: cover;
+    height: 300px;
+}
+
+#content {
+
+    padding: 10px 0;
+
+    h3 {
+        color: white;
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    .box-blue {
+        background-color: $merch;
+        width: 20%
+    }
+
+    #box-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px 0;
+    }
+
+    button {
+        border: none;
+        padding: 8px 0;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    #btn-load {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}

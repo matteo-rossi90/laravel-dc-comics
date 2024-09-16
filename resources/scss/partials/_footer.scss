@@ -1,0 +1,78 @@
+.background {
+    background-image: url('dc-logo-bg.png'), url('footer-bg.jpg');
+    background-size: 30%, cover;
+    background-position-x: 75%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    // height: 400px;
+
+    #flex-wrap {
+
+        display: flex;
+        gap: 25px;
+        padding: 30px 0;
+
+        .navigation {
+
+            h3 {
+                color: white;
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 10px 0;
+            }
+
+            li a {
+                color: rgb(165, 165, 165);
+                text-decoration: none;
+                font-size: 10px;
+            }
+        }
+    }
+
+}
+
+#bottom-bar {
+    background-color: $bottomFooter;
+    // height: 100px;
+    padding: 20px 0;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #btn-sign {
+        border: 2px solid $merch;
+        padding: 12px 16px;
+    }
+
+    #flex-container {
+        padding: 10px 0;
+        @include flexbox();
+
+        ul {
+            text-decoration: none;
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        #list-icon {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            #title {
+                color: $merch;
+                font-weight: 600;
+                padding: 0 20px;
+            }
+
+            li img {
+                max-width: 80%;
+            }
+        }
+    }
+}

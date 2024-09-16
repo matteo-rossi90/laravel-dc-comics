@@ -2,19 +2,25 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="container my-5">
-    <h1>Scrivici</h1>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo modi, iusto dolore eaque laudantium optio, adipisci perspiciatis voluptate obcaecati sit perferendis natus velit ut! Tempora voluptatum ipsam modi rem voluptas.
-    </p>
-</div>
+
+    <section>
+
+        <div class="container">
+            <div class="box">
+                <h1 class="text-margin">{{ $title }}</h1>
+                <p>
+                    {{ $text }}
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
 @endsection
 
 @section('titlePage')
     contatti
-@endsection
-
-@section('hero')
-    <div>HERO CONTACTS</div>
 @endsection

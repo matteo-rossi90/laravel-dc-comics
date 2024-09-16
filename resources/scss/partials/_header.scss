@@ -1,0 +1,30 @@
+header {
+
+    height: 100px;
+    padding: 10px;
+    @include flexbox();
+
+    #box-image img {
+        max-width: 70%;
+    }
+
+    ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+
+        li a {
+            font-weight: 600;
+            text-decoration: none;
+            padding: 38px 0;
+            font-size: 12px;
+        }
+
+        .active {
+            border-bottom: 4px solid $merch;
+            color: $merch
+        }
+    }
+
+
+}
