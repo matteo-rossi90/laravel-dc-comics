@@ -26,8 +26,14 @@
             <h2>Tipo</h2>
             <p>{{ $fumetto->type }}</p>
 
-            <div class="d-flex my-5">
+            <div class="d-flex justify-content-between my-5">
                 <a class="btn btn-primary" href="{{ route('comics.index')}}">Torna alle offerte</a>
+                <div class="d-flex spacing">
+                    <a href="{{ route('comics.edit', $fumetto)}}" class="btn btn-warning">
+                        <i class="fa-solid fa-pencil"></i>
+                    </a>
+                    @include('partials.formdelete')
+                </div>
             </div>
 
         </div>

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="_container">
+<div class="_container my-5">
     <h1>Modifica di {{$comic->title}}</h1>
     <form action="{{ route('comics.update', $comic)}}" method="POST" class="my-5">
         {{-- token di sicurezza che necessario per rendere valido il form,
@@ -44,9 +44,7 @@
 
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
-            <textarea type="text" class="form-control" id="description" cols="30" rows="10" name="description" placeholder="Descrizione">
-                {{ $comic->description }}
-            </textarea>
+            <textarea type="text" class="form-control" id="description" cols="30" rows="10" name="description" placeholder="Descrizione">{{ $comic->description }}</textarea>
         </div>
 
         <div class="mb-3">
