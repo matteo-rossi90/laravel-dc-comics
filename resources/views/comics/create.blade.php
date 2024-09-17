@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="_container">
+<div class="_container my-5">
     <h1>Inserisci un nuovo fumetto</h1>
     <form action="{{ route('comics.store')}}" method="POST" class="my-5">
         {{-- token di sicurezza che necessario per rendere valido il form,
@@ -45,8 +45,8 @@
         </div>
 
         <div class="mb-3">
-            <button type="submit" href="" class="btn btn-primary">Invia</button>
-            <button type="reset" href="" class="btn btn-secondary">Annulla</button>
+            <button type="submit" class="btn btn-primary">Invia</button>
+            <button type="reset" class="btn btn-secondary">Annulla</button>
         </div>
 
     </form>
