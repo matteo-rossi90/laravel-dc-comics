@@ -7,6 +7,15 @@
             <!-- contenitore delle cards -->
             <div id="content" class="_container">
 
+            {{-- Se la variabile di sessione esiste stampare il messaggio dell'alert in cui si afferma che il prodotto è stato eliminato --}}
+            @if (@session('deleted'))
+                <div class="alert alert-success" role="alert">
+                    {{session('deleted')}}
+                </div>
+
+            @endif
+
+
                 <div class="box-blue">
                     <h3>CURRENT SERIES</h3>
                 </div>
@@ -27,6 +36,18 @@
                                 <a href="{{ route('comics.edit', $fumetto)}}" class="btn btn-warning">
                                     <i class="fa-solid fa-pencil"></i>
                                 </a>
+                                <form
+                                    action="{{ route('comics.destroy', $fumetto) }}"
+                                    method="POST"
+                                    onsubmit="return confirm('Sei sicuro di voler eliminare {{$fumetto->title}}?')">
+
+                                    @csrf
+                                    @method('delete')
+
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </form>
 
                             </div>
 
