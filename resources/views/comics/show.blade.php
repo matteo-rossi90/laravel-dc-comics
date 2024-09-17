@@ -5,6 +5,7 @@
 <div class="_container">
     <div class="row g-3 py-5">
         <h1>{{ $fumetto->title }}</h1>
+        <small>Slug: {{$fumetto->slug}}</small>
         <div class="col">
             <img src="{{ $fumetto->thumb }}" alt="{{$fumetto->title}} thumb " >
         </div>

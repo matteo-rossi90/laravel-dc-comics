@@ -16,13 +16,18 @@
                     @foreach ( $comics as $fumetto )
                         <div class="card-items">
 
-                            {{-- parte da modificare e stampare partendo dal db --}}
                             <img src="{{ $fumetto->thumb}}" alt="{{ $fumetto->title }}">
                             <h3>{{ $fumetto->title }}</h3>
                             <h4>{{ $fumetto->price }}</h4>
 
-                            <div class="d-flex justify-content-center my-3">
-                                <a href="{{ route('comics.show', $fumetto)}}" class="btn btn-primary">Dettagli</a>
+                            <div class="d-flex justify-content-between my-3">
+                                <a href="{{ route('comics.show', $fumetto)}}" class="btn btn-primary">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <a href="{{ route('comics.edit', $fumetto)}}" class="btn btn-warning">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </a>
+
                             </div>
 
                         </div>

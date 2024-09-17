@@ -5,7 +5,8 @@
 <div class="_container">
     <h1>Inserisci un nuovo fumetto</h1>
     <form action="{{ route('comics.store')}}" method="POST" class="my-5">
-        {{-- token che genera un identificativo --}}
+        {{-- token di sicurezza che necessario per rendere valido il form,
+        in modo da impedire che form esterni possano inserire altri dati esterni --}}
         @csrf
 
         <div class="mb-3">

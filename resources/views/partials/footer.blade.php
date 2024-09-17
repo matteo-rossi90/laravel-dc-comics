@@ -17,7 +17,7 @@ $follow = config('menu.socialItems');
                 <div id="flex-wrap">
 
                     <!-- colonna che riguarda i menu DC Comics e Shop -->
-                    <div class="col">
+                    <div class="col-2">
 
                         <nav class="navigation">
 
@@ -25,7 +25,6 @@ $follow = config('menu.socialItems');
 
                             <!-- inserimento del menu DC Comics -->
                             <ul>
-
 
                                 <li>
                                     <a href="{{ route('home') }}">Home</a>
@@ -59,7 +58,7 @@ $follow = config('menu.socialItems');
                     </div>
 
                     <!-- colonna che riguarda il menu DC -->
-                    <div class="col">
+                    <div class="col-2">
                         <nav class="navigation">
                             <h3>DC</h3>
 
@@ -78,7 +77,7 @@ $follow = config('menu.socialItems');
                     </div>
 
                     <!-- colonna che riguarda il menu Sites -->
-                    <div class="col">
+                    <div class="col-2">
                         <nav class="navigation">
                             <h3>SITES</h3>
 

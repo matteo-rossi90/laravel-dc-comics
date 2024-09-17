@@ -67,7 +67,9 @@ class ComiController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $comic = Comic::find($id);
+
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -75,7 +77,23 @@ class ComiController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+        $comic = Comic::find($id);
+
+        // dump($data);
+        // dump($id);
+
+        //se il titolo è cambiato, generare un nuovo slug, altrimenti resta lo stesso
+        if($data['title'] == $comic->title){
+            $data['slug'] = $comic->slug;
+        }else{
+            $data['slug'] = Helper::generateSlug($data['title'], Comic::class);
+        }
+
+        //inizializzare l'update del dato
+        $comic->update($data);
+
+        return redirect()->route('comics.show', $comic);
     }
 
     /**
