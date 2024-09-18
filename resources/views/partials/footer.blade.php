@@ -123,7 +123,7 @@ $follow = config('menu.socialItems');
                         @foreach ( $follow as $social )
                             <li>
                                 <a href="#">
-                                    <img src="{{$social['image']}}" :alt="{{$social['text']}}">
+                                    <img src="{{asset($social['image']) }}" alt="{{$social['text']}}">
                                 </a>
                             </li>
 
