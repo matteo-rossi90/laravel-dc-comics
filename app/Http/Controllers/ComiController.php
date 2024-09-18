@@ -79,8 +79,13 @@ class ComiController extends Controller
     public function show(string $id)
 
     {
+
         //filtrare gli elementi estratti attraverso il numero id
         $fumetto = Comic::find($id);
+
+        if (!isset($fumetto)) {
+            abort(404);
+        }
 
         return view('comics.show', compact('fumetto'));
     }
@@ -140,7 +145,7 @@ class ComiController extends Controller
         //inizializzare l'update del dato
         $comic->update($data);
 
-        return redirect()->route('comics.show', $comic);
+        return redirect()->route('comics.show', $comic)->with('edited', 'Prodotto caricato con successo!');
     }
 
     /**

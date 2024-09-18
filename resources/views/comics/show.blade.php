@@ -3,7 +3,16 @@
 @section('content')
 
 <div class="_container">
+
     <div class="row g-3 py-5">
+
+        {{-- se il prodotto è stato caricato correttamente comunicarlo in pagina --}}
+        @if (@session('edited'))
+            <div class="alert alert-success" role="alert">
+                {{session('edited')}}
+            </div>
+        @endif
+
         <div class="d-flex-justify-content-between">
             <h1>{{ $fumetto->title }}</h1>
             <small>Slug: {{$fumetto->slug}}</small>
