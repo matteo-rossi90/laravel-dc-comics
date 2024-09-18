@@ -30,6 +30,34 @@ class ComiController extends Controller
      */
     public function store(Request $request)
     {
+        //validare i campi obbligatori usando validate()
+        //validate() accetta sempre un array associativo le cui chiavi corrispondono
+        //a i campi dell'entità da rendere obligatori
+
+        $request->validate([
+            'title'=>'required|min:4|max:100',
+            'thumb'=>'required|min:4',
+            'price'=>'required|min:3|max:50',
+            'series'=>'required|min:4|max:100',
+            'sale_date'=>'required',
+            'type'=>'required|min:3',
+        ],[
+            'title.required'=>'Il titolo è un campo obbligatorio',
+            'title.min'=>'Il titolo deve contenere almeno :min caratteri',
+            'title.max'=>'Il titolo deve contenere al massimo :max caratteri',
+            'thumb.required'=>'L\'immagine è un campo obbligatorio',
+            'thumb.min'=>'Il link dell\'immagine deve contenere almeno 4 caratteri',
+            'price.required' => 'Il prezzo è un campo obbligatorio',
+            'price.min' => 'Il prezzo deve contenere almeno :min caratteri',
+            'price.max'=> 'Il prezzo deve contenere massimo :max caratteri',
+            'series.required' => 'La serie è un campo obbligatorio',
+            'series.min' => 'La serie deve contenere almeno :min caratteri',
+            'series.max' => 'La serie deve contenere al massimo :max caratteri',
+            'sale_date.required' =>'La data è un campo obbligatorio',
+            'type.required' => 'Il tipo è un campo obbligatorio'
+        ]
+        );
+
         //salvare nella variabile data tutti i dati contenuti in $request
         $data = $request->all();
 
@@ -71,6 +99,32 @@ class ComiController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $request->validate(
+            [
+                'title' => 'required|min:4|max:100',
+                'thumb' => 'required|min:4',
+                'price' => 'required|min:3|max:50',
+                'series' => 'required|min:4|max:100',
+                'sale_date' => 'required',
+                'type' => 'required|min:3',
+            ],
+            [
+                'title.required' => 'Il titolo è un campo obbligatorio',
+                'title.min' => 'Il titolo deve contenere almeno :min caratteri',
+                'title.max' => 'Il titolo deve contenere al massimo :max caratteri',
+                'thumb.required' => 'L\'immagine è un campo obbligatorio',
+                'thumb.min' => 'Il link dell\'immagine deve contenere almeno 4 caratteri',
+                'price.required' => 'Il prezzo è un campo obbligatorio',
+                'price.min' => 'Il prezzo deve contenere almeno :min caratteri',
+                'price.max' => 'Il prezzo deve contenere massimo :max caratteri',
+                'series.required' => 'La serie è un campo obbligatorio',
+                'series.min' => 'La serie deve contenere almeno :min caratteri',
+                'series.max' => 'La serie deve contenere al massimo :max caratteri',
+                'sale_date.required' => 'La data è un campo obbligatorio',
+                'type.required' => 'Il tipo è un campo obbligatorio'
+            ]
+        );
+
         $data = $request->all();
         $comic = Comic::find($id);
 
