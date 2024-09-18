@@ -145,7 +145,7 @@ class ComiController extends Controller
         //inizializzare l'update del dato
         $comic->update($data);
 
-        return redirect()->route('comics.show', $comic)->with('edited', 'Prodotto caricato con successo!');
+        return redirect()->route('comics.show', $comic)->with('edited', 'Prodotto modificato con successo!');
     }
 
     /**
